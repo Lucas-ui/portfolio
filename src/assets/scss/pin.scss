@@ -1,0 +1,11 @@
+.pinContent {
+    max-width: 500px;
+    background-color: $black;
+    color: $white;
+    border: solid 1px $white;
+    z-index:1;
+    position: relative;
+}
+.visible {
+    display: block;
+}
