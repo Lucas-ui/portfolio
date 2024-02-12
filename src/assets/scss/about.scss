@@ -1,0 +1,40 @@
+#container-about {
+  height: 100vh;
+  .title-about {
+    font-size: $xxl;
+    text-align: center;
+  }
+  .left-right {
+    display: flex;
+  }
+  .left-content-about {
+    display: flex;
+    align-items: center;
+    padding: 100px;
+    width: 50%;
+  }
+  .right-content-about {
+    width: 50%;
+    .right-img {
+      display: flex;
+      justify-content: center;
+      img {
+        width: 300px;
+        height: 300px;
+      }
+    }
+  }
+}
+
+.onScroll {
+  animation: effect 0.3s ease;
+}
+
+@keyframes effect {
+  0% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

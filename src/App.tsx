@@ -1,11 +1,11 @@
 import Header from "./components/Header";
-import FormationsSection from "./components/FormationsSection";
+import About from "./components/About";
 
 function App() {
   return (
     <div>
       <Header />
-      <FormationsSection />
+      <About />
     </div>
   );
 }
