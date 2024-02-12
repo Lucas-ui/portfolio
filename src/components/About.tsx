@@ -1,20 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from "react";
 function About() {
   useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('onScroll');
+          entry.target.classList.add("onScroll");
         } else {
-          entry.target.classList.remove('onScroll');
+          entry.target.classList.remove("onScroll");
         }
       });
     });
 
-    document.querySelectorAll('#container-about').forEach(elem => {
+    document.querySelectorAll(".title-about, .left-right").forEach((elem) => {
       observer.observe(elem);
     });
 
+    return () => {
+      observer.disconnect();
+    };
   }, []);
   return (
     <>
@@ -25,25 +28,25 @@ function About() {
         <div className="left-right">
           <div className="left-content-about">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquid aut consequuntur,
-              dolorem eius exercitationem fuga fugit minima necessitatibus nulla repudiandae ut voluptates
-              voluptatibus! Aspernatur aut corporis distinctio ducimus eos est exercitationem expedita incidunt
-              iusto maiores molestiae, nam pariatur, perspiciatis praesentium rem reprehenderit, sapiente similique
-              sunt suscipit tenetur. Fuga, libero!
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, doloribus earum in labore modi natus
-              non perferendis
-              quam similique soluta, totam velit vero voluptate. Accusantium doloremque earum quae quibusdam reiciendis?
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores,
+              iusto! Reprehenderit, unde! Quas dolor dolorum ducimus! Deleniti
+              ex fugiat quo. Pariatur dicta eaque, quibusdam tempore iste hic
+              dolores earum et vero eius dolorem veniam cum, cumque facere
+              asperiores quidem sapiente quas expedita! Eum, quidem velit. Error
+              voluptates delectus sequi provident soluta nemo veritatis ut fugit
+              omnis repudiandae quaerat incidunt, excepturi nulla at facilis
+              hic! Tenetur, cupiditate optio vero voluptatum minus aliquid quam
+              deserunt accusantium ducimus voluptate explicabo natus dolores
+              corporis aspernatur ut quas illo quod dolorem mollitia ullam?
+              Perferendis id velit quis? Odio deserunt similique ipsum, quaerat
+              eius dicta commodi.
             </p>
           </div>
-          <div className="right-content-about">
-            <div className="right-img">
-              <img src="src/assets/image/logo-header-v4.png"/>
-            </div>
-          </div>
+          <div className="right-content-about"></div>
         </div>
       </section>
     </>
-  )
+  );
 }
 
 export default About;

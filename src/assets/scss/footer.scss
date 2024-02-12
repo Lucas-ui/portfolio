@@ -1,0 +1,17 @@
+footer {
+    min-height: 100px;
+    background: url("src/assets/image/space-background.png");
+    background-size: cover;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    img {
+        width: 32px;
+        height: 32px;
+        background-color: $white;
+        border-radius: 10px;
+    }
+}

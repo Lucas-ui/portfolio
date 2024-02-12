@@ -85,16 +85,20 @@ function Header() {
         <section className="container">
           <div className="background-content">
             <div className="background-image">
-              <img className="logo_middle" src="src/assets/image/logo_middle.png"
+              <img
+                className="logo_middle"
+                src="src/assets/image/logo_middle.png"
+                draggable="false"
               />
               <img
-                  className="background" src="src/assets/image/background-image.png"
-                  draggable="false"
+                className="background"
+                src="src/assets/image/background-image.png"
+                draggable="false"
               />
             </div>
             {logos.map((logo, index) => (
-                <div
-                    key={index}
+              <div
+                key={index}
                 className={`pin-logo ${logo.className}`}
                 onMouseOver={() => handleMouseOver(index)}
                 onMouseOut={handleMouseOut}
