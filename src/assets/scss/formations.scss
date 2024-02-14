@@ -1,0 +1,10 @@
+#container-formations {
+    background: url("src/assets/image/space-background.png");
+    background-size: cover;
+    color: $white;
+    padding-bottom: $section-spacer;
+
+    .formations-content {
+        text-align: center;
+    }
+}
